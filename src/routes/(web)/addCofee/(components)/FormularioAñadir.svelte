@@ -2,6 +2,7 @@
 
     import Input from "$lib/components/input/inputText.svelte";
     import Select from "$lib/components/input/select.svelte";
+    import InputNumber from "$lib/components/input/inputNumber.svelte";
 
     import { goto } from "$app/navigation";
 
@@ -87,7 +88,7 @@
 
         <Input clase="ic1" id={idNombre} label={nombre} bind:value={datosCafe.nombre} />
 
-        <Input id={idPrecio} label={precio} bind:value={datosCafe.precio} />
+        <InputNumber id={idPrecio} label={precio} bind:value={datosCafe.precio} />
         
         <Input id={idDescripcion} label={descripcion} bind:value={datosCafe.descripcion} />
         
