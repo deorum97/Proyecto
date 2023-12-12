@@ -7,9 +7,9 @@
 
     let familias = [
         {valor:1, nombre:"Cafe frio"},
-        {valor:2, nombre:"Expresso"},
-        {valor:3, nombre:"Capuchino"},
-        {valor:4, nombre:"Basico"},
+        {valor:3, nombre:"Batidos"},
+        {valor:4, nombre:"Expresso"},        
+        {valor:6, nombre:"Basico"},
     ]
 
     function handleChange(event: any) {

@@ -43,8 +43,11 @@
 <div class="card">
     <div class="wrapper">
         <img class="imagen" src={cafe.urlimagen} alt="iamgen de cafe">
-        <h1> {cafe.nombre}</h1>
-        <p>{cafe.descripion}</p>
+        <div class="texto">
+            <h1> {cafe.nombre}</h1>
+            <p>{cafe.descripcion}</p>
+        </div>
+        
     </div>
     <div class="buy-wrapper"> 
         

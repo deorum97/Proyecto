@@ -25,30 +25,25 @@
 
     let crear = "Terminar cafe"
 
-    type typeNuevoCafe ={
-        nombre: string;
-        precio: string;
-        descripion: string;
-        familia: string;
-        imagen: string;
-    }
-
-    let datosCafe: typeNuevoCafe = {
+    let datosCafe={
         nombre: "",
         precio: "",
-        descripion: "",
-        familia: "",
-        imagen: "",
+        descripcion: "",
+        familiaId: "",
+        urlimagen: "",
     }
 
     function nuevoCafe() {
-        let lastCafe: typeNuevoCafe = {
+        let lastCafe= {
             nombre: datosCafe.nombre,
             precio: datosCafe.precio,
-            descripion: datosCafe.descripion,
-            familia: datosCafe.familia,
-            imagen: datosCafe.imagen,
+            descripcion: datosCafe.descripcion,
+            familiaId: datosCafe.familiaId,
+            urlimagen: datosCafe.urlimagen,
+            activo: true,
         }
+
+        console.log(lastCafe)
 
         async function crear() {
             let URL=`http://jcoffeeapi.northeurope.cloudapp.azure.com:8080/api/cafes/create`;
@@ -64,7 +59,9 @@
 
                 if (response.ok) {
 					const data = await response.json();
-					lastCafe = data;
+					let NewCafe = data;
+
+                    console.log(NewCafe)
 
                     goto("/")
 				} else {
@@ -81,12 +78,6 @@
         /* console.log(lastCafe) */
     }
 
-    let familias = [
-        {valor:1, nombre:"Cafe frio"},
-        {valor:2, nombre:"Expresso"},
-        {valor:3, nombre:"Capuchino"},
-        {valor:4, nombre:"Basico"},
-    ]
 </script>
 
     <div class="form">
@@ -98,11 +89,11 @@
 
         <Input id={idPrecio} label={precio} bind:value={datosCafe.precio} />
         
-        <Input id={idDescripcion} label={descripcion} bind:value={datosCafe.descripion} />
+        <Input id={idDescripcion} label={descripcion} bind:value={datosCafe.descripcion} />
         
-        <Select bind:values={datosCafe.familia}/>
+        <Select bind:values={datosCafe.familiaId}/>
         
-        <Input id={idImagen} label={imagen} bind:value={datosCafe.imagen} />
+        <Input id={idImagen} label={imagen} bind:value={datosCafe.urlimagen} />
         
         <button class="submit" on:click={nuevoCafe}>{crear}</button>
     </div>

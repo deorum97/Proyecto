@@ -18,7 +18,7 @@
 	let inicio ="Inicio"
 	let cafe1 = "Cafe Frío"
 	let cafe2 = "Expresso"
-	let cafe3 = "Capuchino"
+	let cafe3 = "Batidos"
 	let cafe4 = "Básicos"
 
 	let add = "Añadir cafe"
@@ -74,7 +74,7 @@
 				<li><a href="/">{inicio}</a></li>
 				<li><a href="/cafeFrio">{cafe1}</a></li>
 				<li><a href="/expresso">{cafe2}</a></li>
-				<li><a href="/capuchino">{cafe3}</a></li>
+				<li><a href="/batidos">{cafe3}</a></li>
 				<li><a href="/basics">{cafe4}</a></li>
 			</ul>
 
