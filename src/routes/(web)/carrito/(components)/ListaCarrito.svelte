@@ -59,8 +59,8 @@
                     idPedido: $pedido.id,
                     idCafe: cafe.idCafe,
                     nombreCafe: cafe.nombreCafe,
-                    precio: cafe.precio,
                     cantidad: cafe.cantidad,
+                    precioLinea: cafe.precio * cafe.cantidad,
                 };
             });
 
