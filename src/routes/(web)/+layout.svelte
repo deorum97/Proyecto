@@ -1,8 +1,5 @@
-<script lang="ts">
-    import type { LayoutData } from './$types';
-    
+<script lang="ts">    
     import Header from '$lib/components/Header.svelte';
-    export let data: LayoutData;
 </script>
 
 <Header />
